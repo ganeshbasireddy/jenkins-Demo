@@ -17,5 +17,16 @@ pipeline {
                 echo 'Deploy the code'
             }
         }
+        post{
+             always{
+                     echo 'Build Completed'
+             }
+             Success{
+                      echo 'Build was successful'                    
+             }
+             Failure{
+                      echo 'Build was Failed
+             }
+        }       
     }
 }
